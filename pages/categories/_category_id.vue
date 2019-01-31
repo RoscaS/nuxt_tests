@@ -1,8 +1,10 @@
 <template>
-  <section class="section">
+  <section  v-if="id" class="section">
     <h2>{{ category.name }}</h2>
     <ul>
-      <li><nuxt-link :to="`/categories/${category.id}`">root</nuxt-link></li>
+      <li>
+        <nuxt-link :to="`/categories/${id}`">root</nuxt-link>
+      </li>
       <li><b>Articles:</b></li>
       <ul>
         <li v-for="article in category.articles" :key="article.id">
@@ -19,10 +21,13 @@
 
   export default {
     name: '_category_id',
+
     computed: {
+      id () {
+        return this.$route.params.category_id
+      },
       category() {
-        let id = this.$route.params.category_id
-        return categories.find(i => i.id === parseInt(id))
+        return categories.find(i => i.id === parseInt(this.id))
       },
     },
     methods: {

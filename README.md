@@ -1,6 +1,6 @@
 # nuxt-test
 
-> Nuxt.js project
+* [tuto](https://www.toptal.com/vue-js/server-side-rendered-vue-js-using-nuxt-js)
 
 ## Build Setup
 

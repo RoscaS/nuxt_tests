@@ -1,5 +1,7 @@
 <template>
-  <h4>Les {{ category.name }} {{ article.name }}</h4>
+  <div>
+    <h4>Les {{ category.name }} {{ article.name }}</h4>
+  </div>
 </template>
 
 <script>
@@ -7,14 +9,19 @@
 
   export default {
     name: '_article_id',
+
     computed: {
+      catId() {
+        return this.$route.params.category_id
+      },
+      articleId() {
+        return this.$route.params.article_id
+      },
       category() {
-        let catId = this.$route.params.category_id
-        return categories.find(i => i.id === parseInt(catId))
+        return categories.find(i => i.id === parseInt(this.catId))
       },
       article() {
-        let articleId = this.$route.params.article_id
-        return this.category.articles.find(i => i.id === parseInt(articleId))
+        return this.category.articles.find(i => i.id === parseInt(this.articleId))
       },
     },
   }

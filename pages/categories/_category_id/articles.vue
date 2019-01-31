@@ -8,9 +8,6 @@
 <script>
   export default {
     name: 'articles',
-    data: () => ({
-
-    }),
   }
 </script>
 
