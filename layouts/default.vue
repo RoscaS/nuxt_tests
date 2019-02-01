@@ -1,14 +1,37 @@
 <template>
-  <div class="container">
-    <div class="content">
-      <section class="section">
-        <nuxt/>
-      </section>
+  <div class="main">
+
+    <Header class="header"/>
+
+    <div class="container">
+      <div class="columns content">
+        <div class="column is-one-fifth">
+          <CategoriesNav class="categories-nav"/>
+        </div>
+        <div class="column is is-three-fifths">
+          <section class="section">
+            <nuxt/>
+          </section>
+        </div>
+      </div>
     </div>
+
+    <Footer class="footer"/>
+
   </div>
 </template>
 
-<style>
+<script>
+  import Header from '../components/Header'
+  import Footer from '../components/Footer'
+  import CategoriesNav from '../components/CategoriesNav'
+
+  export default {
+    components: {CategoriesNav, Footer, Header},
+  }
+</script>
+
+<style lang="scss">
   html {
     font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
@@ -20,6 +43,20 @@
     box-sizing: border-box;
   }
 
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .main {
+    display: flex;
+    min-height: 105vh;
+    flex-direction: column;
+  }
+
+  .container {
+    flex: 1
+  }
+
   *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -28,30 +65,30 @@
   .button--green {
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #3b8070;
-    color: #3b8070;
+    border: 1px solid #3B8070;
+    color: #3B8070;
     text-decoration: none;
     padding: 10px 30px;
   }
 
   .button--green:hover {
-    color: #fff;
-    background-color: #3b8070;
+    color: #FFFFFF;
+    background-color: #3B8070;
   }
 
   .button--grey {
     display: inline-block;
     border-radius: 4px;
-    border: 1px solid #35495e;
-    color: #35495e;
+    border: 1px solid #35495E;
+    color: #35495E;
     text-decoration: none;
     padding: 10px 30px;
     margin-left: 15px;
   }
 
   .button--grey:hover {
-    color: #fff;
-    background-color: #35495e;
+    color: #FFFFFF;
+    background-color: #35495E;
   }
 </style>
 

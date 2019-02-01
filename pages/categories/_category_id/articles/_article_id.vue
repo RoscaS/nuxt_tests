@@ -8,7 +8,7 @@
   import categories from '~/plugins/categories'
 
   export default {
-    name: '_article_id',
+    name: 'article_id',
 
     computed: {
       catId() {

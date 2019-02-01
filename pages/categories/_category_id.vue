@@ -20,7 +20,7 @@
   import categories from '~/plugins/categories'
 
   export default {
-    name: '_category_id',
+    name: 'category_id',
 
     computed: {
       id () {

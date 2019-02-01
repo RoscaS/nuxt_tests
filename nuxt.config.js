@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   modules: [
-
+    '@nuxtjs/moment'
   ],
   plugins: [
     '~/plugins/buefy',
