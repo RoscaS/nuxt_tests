@@ -1,18 +1,14 @@
 <template>
-  <div>
-    <h1>Default</h1>
-    <nuxt/>
-  </div>
+  <h1>Admin</h1>
 </template>
 
 <script>
-
   export default {
-    name: 'categories',
+    name: 'admin',
+    layout: 'admin-layout'
   }
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-

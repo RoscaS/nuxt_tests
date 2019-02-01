@@ -4,11 +4,10 @@
     <Header class="header"/>
 
     <div class="container">
-      <p class="layout">Main layout</p>
+      <p class="layout">Admin layout</p>
       <div class="content">
         <div class="columns">
           <div class="column is-one-fifth">
-            <CategoriesNav class="categories-nav"/>
           </div>
           <div class="column is is-three-fifths">
             <section class="section">
@@ -52,7 +51,7 @@
 
   .layout {
     float: right;
-    color: #3B8070;
+    color: orangered;
     font-weight: bold;
   }
 

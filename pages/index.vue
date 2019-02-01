@@ -1,15 +1,6 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        nuxt-test
-      </h1>
-      <div class="links">
-        <nuxt-link class="button--green" to="/categories">Catégories</nuxt-link>
-      </div>
-
-    </div>
+  <section class="section">
+    <app-logo class="logo"/>
   </section>
 </template>
 
@@ -23,7 +14,11 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+
+  .logo {
+    margin-left: 75px;
+  }
 
 </style>
 
